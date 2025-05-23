@@ -1,0 +1,429 @@
+Name: Alarms
+Id: g=3293e7cd8de0bb06cc725e017a984470
+Type: AlarmsCategoryFolder
+Children:
+- Name: DigitalAlarmCustomParams
+  Id: g=99d268771fbcd3a6ee5ca798091b11fc
+  Supertype: OffNormalAlarmController
+  Children:
+  - Class: Reference
+    Target: ns=17;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=0ba367c6a280a9b3cea48288311996f2
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=260e95c7e2c26ca898d3c19cfb868680
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: LastEvent
+    Id: g=88b4e4a36bbfe14f7e278d026bd94bec
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Equiptment
+    Id: g=f31d06af9d364bb7f4acc9cded62ec8b
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Motor"
+  - Name: Message
+    Id: g=23ed8b19751c3a5f2340e24d85c31723
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    ModellingRule: Optional
+    Value: {"LocaleId":"en-US","Text":"Alarm 1"}
+  - Class: Reference
+    Type: GeneratesEvent
+    Target: g=3cad2db7bd40ebb87648c3ee7f8d0cd9
+- Name: DigitalAlarmCustomParams1
+  Id: g=4f4a28970fab348c6a6b9a956bef3b0a
+  Type: DigitalAlarmCustomParams
+  Children:
+  - Class: Reference
+    Target: ns=17;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=02bcf82845be9aa53cca4cbb905d8203
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=b498e0849c97d2f19499eefa293d2678
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=5ba92d53d0ff2acd0679ac056b457bc4
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Variable1"
+      Children:
+      - Name: Mode
+        Id: g=77d3162e5c488b517dbe723b07880a2d
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=7038b42c32ead3ef11c017fc2367b837
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Equiptment
+    Id: g=5a989bf2e1b1b9ea944dc3cb427f7ecb
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Motor"
+- Name: DigitalAlarmCustomParams2
+  Id: g=3492e4581f1b108a002610daf1736f37
+  Type: DigitalAlarmCustomParams
+  Children:
+  - Class: Reference
+    Target: ns=17;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=2d136d1dfd63220286b1be3f8799324b
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=71702bd0ef02aba27eb23e1ceb30b326
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=6344e60df42b558327dc11dafcabe44a
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Variable2"
+      Children:
+      - Name: Mode
+        Id: g=5e6ee2409e24089ff2d54cbfdec6cb54
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=1616a9984c1f336b781ab4467051663b
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Equiptment
+    Id: g=ba42e62da152f62cc0a118ed1e6f2b3b
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Valve"
+  - Name: Message
+    Id: g=846a1be9253228a43d59ad0187902cec
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Alarm 2"}
+- Name: DigitalAlarmCustomParams3
+  Id: g=f162c9fbb9ce89ce5043338129a5a0b4
+  Type: DigitalAlarmCustomParams
+  Children:
+  - Class: Reference
+    Target: ns=17;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=f26f4d1efbc07b2a12695a55f270b488
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=cb44ddf7489413166bbb01b162c61612
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=09b9142d8cd116eae83598d651b25459
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Variable3"
+      Children:
+      - Name: Mode
+        Id: g=601c8cbba75c5c21ef298cde184362df
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=8e36009d4124cc0c096bd8fae6486272
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Equiptment
+    Id: g=32010d955fc77cac35241c4a686c1815
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Sensor"
+  - Name: Message
+    Id: g=67e37c553c76b2b2a997e204b0a73800
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Alarm 3"}
+- Name: DigitalAlarmCustomParams4
+  Id: g=4595682b7e39940eaedca2d037223f22
+  Type: DigitalAlarmCustomParams
+  Children:
+  - Class: Reference
+    Target: ns=17;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=ad58a4b69f98e97f025dc3a332c54b4b
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=8446b1fe376436bcc0dfb6d6c2d9008c
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=b23f5c3ff36c8fd2511685629c1c6576
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Variable4"
+      Children:
+      - Name: Mode
+        Id: g=0e6f51002df8639f808505ba0adb192e
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=42dee6be1e0bc830303a56e96e54d2fb
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Equiptment
+    Id: g=8f42e16c6035f5b98f52a771144a2436
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Piston"
+  - Name: Message
+    Id: g=de42957464b99c9b4c2d04d8444123b5
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Alarm 4"}
+- Name: DigitalAlarmCustomParams5
+  Id: g=de2b0f4cfaabe0911622067f5017a3ee
+  Type: DigitalAlarmCustomParams
+  Children:
+  - Class: Reference
+    Target: ns=17;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=9e04c8e9e966d502809557b343c3d522
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=e148705e32fa6e8830b04f8bff06f3d8
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=c54fb4421cb42d660c0a30cfb69f8424
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Variable5"
+      Children:
+      - Name: Mode
+        Id: g=28be7c0f803f52654247b9f1e47b4f09
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=1a05e7ff6bf50fd1c780f290ac2c3872
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Equiptment
+    Id: g=98afc4d9f4be3b0c61705f4c5f2d4d99
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Tank"
+  - Name: Message
+    Id: g=a178b416d0d328f25c6883ea32b9b36f
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Alarm 5"}
