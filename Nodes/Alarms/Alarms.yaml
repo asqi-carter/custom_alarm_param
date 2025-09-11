@@ -67,6 +67,23 @@ Children:
   - Class: Reference
     Type: GeneratesEvent
     Target: g=3cad2db7bd40ebb87648c3ee7f8d0cd9
+  - Name: CurrentUser
+    Id: g=2907c52cb188d6c3135407e6ff18a40b
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=381981cd7680525ce67887ea278bf630
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/custom_alarm_param/Model/CurrentUser"
+      Children:
+      - Name: Mode
+        Id: g=c464a64edecb9a2df133a63ba223d8ed
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
 - Name: DigitalAlarmCustomParams1
   Id: g=4f4a28970fab348c6a6b9a956bef3b0a
   Type: DigitalAlarmCustomParams
@@ -135,6 +152,16 @@ Children:
     Type: BaseDataVariableType
     DataType: String
     Value: "Motor"
+  - Name: CurrentUser
+    Id: g=f9331ffd13fc38ae7d1f6f81ccb50ba9
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=66464adc73f99dda501b8809a0bf2ce6
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/custom_alarm_param/Model/CurrentUser"
 - Name: DigitalAlarmCustomParams2
   Id: g=3492e4581f1b108a002610daf1736f37
   Type: DigitalAlarmCustomParams
@@ -208,6 +235,16 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"LocaleId":"en-US","Text":"Alarm 2"}
+  - Name: CurrentUser
+    Id: g=cc45a9ac5ba50fc44464d4bd46f1a2bb
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=2a27fc3cf52cde400c4430864083dda2
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/custom_alarm_param/Model/CurrentUser"
 - Name: DigitalAlarmCustomParams3
   Id: g=f162c9fbb9ce89ce5043338129a5a0b4
   Type: DigitalAlarmCustomParams
@@ -281,6 +318,16 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"LocaleId":"en-US","Text":"Alarm 3"}
+  - Name: CurrentUser
+    Id: g=f2d8d58c6fdd46fe338af2a5a7feb6d5
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=304b33243f5f182297d70065f223a1d0
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/custom_alarm_param/Model/CurrentUser"
 - Name: DigitalAlarmCustomParams4
   Id: g=4595682b7e39940eaedca2d037223f22
   Type: DigitalAlarmCustomParams
@@ -354,6 +401,16 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"LocaleId":"en-US","Text":"Alarm 4"}
+  - Name: CurrentUser
+    Id: g=aaf10fa8b873716a7e55065d60014b0d
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=785864cc54d252e248c1e510d3d55b16
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/custom_alarm_param/Model/CurrentUser"
 - Name: DigitalAlarmCustomParams5
   Id: g=de2b0f4cfaabe0911622067f5017a3ee
   Type: DigitalAlarmCustomParams
@@ -427,3 +484,13 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"LocaleId":"en-US","Text":"Alarm 5"}
+  - Name: CurrentUser
+    Id: g=ad21113b0daeff1430de64ad598f11f7
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=e66c6d45e7c0687a6860c0834f61806b
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/custom_alarm_param/Model/CurrentUser"

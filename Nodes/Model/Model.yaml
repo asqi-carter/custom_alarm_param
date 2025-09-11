@@ -21,3 +21,8 @@ Children:
   Id: g=77e39fb7f5b4f605cbe961dce47cec2f
   Type: BaseDataVariableType
   DataType: Boolean
+- Name: CurrentUser
+  Id: g=fb0c0a32df8fb48ce48d0d870376b25b
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "Anonymous"

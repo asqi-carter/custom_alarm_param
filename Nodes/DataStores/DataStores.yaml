@@ -55,6 +55,9 @@ Children:
         - Name: Equiptment
           Type: StoreColumn
           DataType: String
+        - Name: CurrentUser
+          Type: StoreColumn
+          DataType: String
         - Name: 'Message_en-US'
           Type: StoreColumn
           DataType: String

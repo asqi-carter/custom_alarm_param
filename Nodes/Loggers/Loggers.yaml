@@ -40,6 +40,10 @@ Children:
       Type: EventFieldPath
       DataType: NodePath
       Value: "/26:Equiptment"
+    - Name: CurrentUser
+      Type: EventFieldPath
+      DataType: NodePath
+      Value: "/26:CurrentUser"
     - Name: Message
       Type: EventFieldPath
       DataType: NodePath
@@ -59,6 +63,9 @@ Children:
       Type: BaseDataVariableType
       DataType: NodeId
     - Name: Equiptment
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: CurrentUser
       Type: BaseDataVariableType
       DataType: String
     - Name: Message
@@ -81,6 +88,14 @@ Children:
         Type: DynamicLink
         DataType: NodePath
         Value: "../../EventArguments/Equiptment"
+    - Name: CurrentUser
+      Type: EventFieldToLog
+      DataType: String
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../EventArguments/CurrentUser"
     - Name: Message
       Type: EventFieldToLog
       DataType: LocalizedText

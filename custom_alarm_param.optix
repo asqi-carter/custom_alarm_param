@@ -108,15 +108,15 @@ Project:
    Module: FTOptix.NetLogic
    Version: 4.0
  Statistics:
-  TotalNodeCount: 2288
-  Objects: 426
-  ObjectTypes: 20
-  Variables: 1832
+  TotalNodeCount: 2960
+  Objects: 570
+  ObjectTypes: 30
+  Variables: 2345
   VariableTypes: 0
   DataTypes: 0
-  Methods: 10
-  References: 118
+  Methods: 15
+  References: 132
   ReferenceTypes: 0
-  Files: 30
+  Files: 33
  Nodes:
  - File: Nodes/custom_alarm_param.yaml

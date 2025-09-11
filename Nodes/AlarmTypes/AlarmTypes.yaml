@@ -123,3 +123,6 @@ Children:
     Type: BaseDataVariableType
     DataType: String
     Value: "Motor"
+  - Name: CurrentUser
+    Type: BaseDataVariableType
+    DataType: String
