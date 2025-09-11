@@ -4,3 +4,8 @@
 Shows how to add custom variables to a custom digital alarm type, store in embedded db via event logger, and render in an alarm filter
 
 buttons are configured to variables that are tied to the alarms themselves. must click refresh to see them after toggling
+
+
+https://engage.rockwellautomation.com/discussion/ft-optix-adding-comments-to-logix-events#bmb56c41c5-ab59-4d6b-8c9e-0199397485f9
+
+Follow up thread on adding a user to the alarm logger
