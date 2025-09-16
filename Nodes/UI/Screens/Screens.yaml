@@ -13,7 +13,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"Button1"}
+      Value: {"LocaleId":"en-US","Text":"Alarm 1"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -97,7 +97,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"Button2"}
+      Value: {"LocaleId":"en-US","Text":"Alarm 2"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -181,7 +181,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"Button3"}
+      Value: {"LocaleId":"en-US","Text":"Alarm 3"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -265,7 +265,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"Button4"}
+      Value: {"LocaleId":"en-US","Text":"Alarm 4"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -349,7 +349,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"Button5"}
+      Value: {"LocaleId":"en-US","Text":"Alarm 5"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -472,7 +472,7 @@ Children:
             DataType: LocalizedText
             ReferenceType: HasParameter
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"SELECT Equiptment, CurrentUser, {1:sql_identifier} AS Message, Severity, Time FROM {0:sql_identifier} WHERE Time BETWEEN {2:sql_literal} AND {3:sql_literal} ORDER BY Time DESC"}
+            Value: {"LocaleId":"en-US","Text":"SELECT Equiptment, CurrentUser, {1:sql_identifier} AS Message, Severity, Time FROM {0:sql_identifier} WHERE Severity <= {4:sql_literal} AND Time BETWEEN {2:sql_literal} AND {3:sql_literal} ORDER BY Time DESC"}
           - Name: Source0
             Type: BaseDataVariableType
             DataType: BaseDataType
@@ -482,11 +482,6 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "{AlarmsEventLogger}@BrowseName"
-              Children:
-              - Name: Mode
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                Value: 2
           - Name: Source1
             Type: BaseDataVariableType
             DataType: BaseDataType
@@ -510,14 +505,6 @@ Children:
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "{Session}/ActualLanguage"
-                  Children:
-                  - Name: Mode
-                    Type: BaseVariableType
-                    DataType: DynamicLinkMode
-              - Name: Mode
-                Type: PropertyType
-                DataType: DynamicLinkMode
-                ReferenceType: HasComponent
           - Name: Source2
             Type: BaseDataVariableType
             DataType: BaseDataType
@@ -527,12 +514,6 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../From@Value"
-              Children:
-              - Name: Mode
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                ModellingRule: Optional
-                Value: 2
           - Name: Source3
             Type: BaseDataVariableType
             DataType: BaseDataType
@@ -542,12 +523,15 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../To@Value"
-              Children:
-              - Name: Mode
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                ModellingRule: Optional
-                Value: 2
+          - Name: ns=3;Source4
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/custom_alarm_param/Model/SeverityThreshold"
       - Name: Columns
         Type: BaseObjectType
         Children:
@@ -748,6 +732,42 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "{Item}/CurrentUser"
+        - Name: DataGridColumn2
+          Type: DataGridColumn
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":26,"TextId":"Severity"}
+          - Name: Width
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+          - Name: Visible
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: HeaderAlignment
+            Type: BaseDataVariableType
+            DataType: TextHorizontalAlignment
+          - Name: ContentAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+          - Name: OrderBy
+            Type: BaseDataVariableType
+            DataType: NodePath
+            Value: "{Item}/Severity"
+          - Name: DataItemTemplate
+            Type: DataGridLabelItemTemplate
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Item}/Severity"
       - Name: SelectedItem
         Type: NodePointer
         DataType: NodeId
@@ -1163,6 +1183,84 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 30.0
+  - Name: Label2
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Severity Threshold"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 330.0
+  - Name: SpinBox1
+    Type: SpinBox
+    Children:
+    - Name: Value
+      Type: BaseDataVariableType
+      DataType: Double
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/custom_alarm_param/Model/SeverityThreshold"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 80.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 365.0
+    - Name: MinValue
+      Type: BaseDataVariableType
+      DataType: Double
+      ModellingRule: Optional
+      Value: 1.0
+    - Name: MaxValue
+      Type: BaseDataVariableType
+      DataType: Double
+      ModellingRule: Optional
+      Value: 5.0
+  - Name: Label3
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Toggle Alarm #"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 12.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 15.0
 - Name: LoginScreen
   Id: g=64131463fdff550a4d42f31ef5160641
   Supertype: Screen

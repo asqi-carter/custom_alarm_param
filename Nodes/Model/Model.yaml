@@ -26,3 +26,6 @@ Children:
   Type: BaseDataVariableType
   DataType: String
   Value: "Anonymous"
+- Name: SeverityThreshold
+  Type: BaseDataVariableType
+  DataType: Int32

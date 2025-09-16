@@ -245,6 +245,11 @@ Children:
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/custom_alarm_param/Model/CurrentUser"
+  - Name: Severity
+    Id: g=f908f0f1b5f76e93837eab3e88b5f106
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 2
 - Name: DigitalAlarmCustomParams3
   Id: g=f162c9fbb9ce89ce5043338129a5a0b4
   Type: DigitalAlarmCustomParams
@@ -328,6 +333,11 @@ Children:
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/custom_alarm_param/Model/CurrentUser"
+  - Name: Severity
+    Id: g=17c4589f1bfacd847f3bdb20b17ed5a5
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 3
 - Name: DigitalAlarmCustomParams4
   Id: g=4595682b7e39940eaedca2d037223f22
   Type: DigitalAlarmCustomParams
@@ -411,6 +421,11 @@ Children:
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/custom_alarm_param/Model/CurrentUser"
+  - Name: Severity
+    Id: g=5f4ea478cdd87babf3a2b0bb14b4fb37
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 4
 - Name: DigitalAlarmCustomParams5
   Id: g=de2b0f4cfaabe0911622067f5017a3ee
   Type: DigitalAlarmCustomParams
@@ -494,3 +509,8 @@ Children:
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/custom_alarm_param/Model/CurrentUser"
+  - Name: Severity
+    Id: g=82e14be95c7c906e45629e710435ab9a
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 5
