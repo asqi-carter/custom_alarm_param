@@ -6,6 +6,10 @@ Shows how to add custom variables to a custom digital alarm type, store in embed
 buttons are configured to variables that are tied to the alarms themselves. must click refresh to see them after toggling
 
 
-https://engage.rockwellautomation.com/discussion/ft-optix-adding-comments-to-logix-events#bmb56c41c5-ab59-4d6b-8c9e-0199397485f9
 
-Follow up thread on adding a user to the alarm logger
+
+[Follow up thread on adding a user to the alarm logger](https://engage.rockwellautomation.com/discussion/ft-optix-adding-comments-to-logix-events#bmb56c41c5-ab59-4d6b-8c9e-0199397485f9)
+
+
+
+[Follow up thread on adding Severity filter](https://engage.rockwellautomation.com/discussion/ft-optix-filtering-active-alarms-in-alarmsdatagrid#bm30e8ff4e-1a42-4761-99ad-019954b3c334)
